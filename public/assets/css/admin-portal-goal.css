@@ -1,0 +1,899 @@
+  /* --------------------- Sidebar Css Start -------------------- */
+  .sidebar {
+    color: white;
+    background-color: var(--primary-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar.show {
+    min-width: 255px; /* Width when shown */
+  }
+  
+ 
+  #sidebar-toggle {
+    padding: 10px;
+    font-size: 24px; /* Larger icon */
+    color: #03AF9F; /* Icon color */
+    background-color: transparent; /* Transparent background */
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 50px; /* Square button */
+    height: 50px;
+    outline: none; /* No outline */
+  }
+  
+  #sidebar-toggle:hover {
+    color: #02776b; /* Darker color when hovered */
+  }
+  
+  #sidebar-toggle:active {
+    color: #014d40; /* Even darker color when clicked */
+  }
+  
+  
+  
+ 
+
+.toggle-img{
+  height: 1rem !important; 
+  width: 1rem !important;
+}
+
+/* .nav.flex-column{
+  transition: all 0.3s ease;
+} */
+
+.main-screen {
+  background-color: var(--secondary);
+  flex: 1;
+  /* padding: 1rem;  */
+}
+
+.w-full{
+  width: 100%;
+}
+
+.form {
+  margin-top: 2rem;
+  border-radius: 20px;
+  border: none;
+  width: 100%; 
+  max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-flex {
+    flex-direction: column !important; 
+  }
+
+   
+   
+  .sidebar {
+    width: 100%;
+  } 
+
+  .sidebar-logo{
+    justify-content: space-between !important;
+    padding: 0 3rem;
+  }
+
+  
+
+  .h-full {
+    height: auto !important;
+  }
+ 
+
+}
+
+.main-screen-content {
+  padding: 0 2.5rem;
+}
+
+ 
+  .nav-link{
+    display: flex;
+    /* gap: 0rem; */
+  }
+
+  .nav-link img{
+    width: 1.4rem;
+    height: auto;
+  }
+
+  .custom-flex{
+    display: flex;
+    flex-direction: row; 
+  }
+  .flex-column{
+    padding-left: 8%;
+    width: 100%;
+    gap: 0.2rem;
+
+  }
+
+  .nav-item{
+    margin-top: 0.1rem ;
+  }
+ 
+  
+  .sidebar-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+
+  .sidebar-logo img{
+    width: 10rem;
+    height: auto;
+    margin-left: 32px;
+}
+
+  .h-full{
+    height: 100vh ;
+  }
+ 
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 3.5rem;
+
+    border-radius: 8px 0px 0px 8px;
+    /* box-shadow: 0px 4px 14px 0px rgba(3, 175, 159, 0.15); */
+
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: white;
+    color: var(--primary); 
+  }
+
+  .nav-link img {
+    margin-right: 10px;
+     /* transition: filter 0.3s ease; */
+  }
+  
+ 
+  .profile{
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(180%) contrast(106%)
+  }
+  
+  .nav-link.active img,
+  .nav-link:hover img {
+    filter: invert(53%) sepia(31%) saturate(7303%) hue-rotate(144deg) brightness(98%) contrast(98%)
+  }
+
+  .nav-link.active:after,
+  .nav-link:hover:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0.4rem;
+    height: 3.5rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    background-color: var(--primary);
+  }
+
+  .goal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 1rem
+
+
+  }
+
+  .heading h1{
+    color: #0B393E;
+    font-family: Lato;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem ;
+  }
+  
+  .logout {
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem; 
+    display: flex;
+  } 
+
+  /* --------------------- Sidebar Css End -------------------- */
+
+ 
+ 
+
+  .horizontal-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab-item {
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative; 
+ 
+   }
+
+   .tab-item a{
+    color: var(--2, #0B393E);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+   }
+
+   .tab-item.active{
+    color: #000;
+
+   }
+  
+  
+  /* Active tab indicator */
+  .tab-item.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+  }
+ 
+
+  .goal-img img{
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .description {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+ 
+  .create-goal-btn{
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.8rem 5rem;
+    border-radius: 8px;
+  }
+
+
+  /* ------------------------ Modal Css Start -------------- */
+/* CSS for your modal */
+.modal-dialog {
+  max-height: 100vh; /* Set maximum height to 100% of viewport height */
+  margin: 0; /* Reset margin to avoid unnecessary spacing */
+}
+
+.modal-content {
+  height: 100%; /* Set content height to 100% of modal-dialog */
+  border: none; /* Remove default border */
+}
+
+.modal-body {
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Optional: If you want to center the content vertically */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+  }
+
+  .modal.show {
+    display: block;
+  }
+
+  .modal-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    transition: all 0.3s ease;
+
+  }
+
+   
+.modal-dialog{
+  margin: 0;
+}
+
+.modal-content {
+  border-radius: 20px 0 0 20px; 
+}
+
+ 
+.form-group {
+  position: relative;
+  display: inline-block;
+}
+
+.form-group .datepicker {
+  padding-right: 10rem; 
+  border-radius: 7px ;
+}
+
+.input-group-addon {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  width: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+}
+
+.dates{
+  color: var(--menu-heading-black, #000);
+  font-family: Poppins;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 3px;
+}
+
+
+.dates label{
+  margin: 0 0 3px 5px;
+}
+
+.custom{
+  border-radius: 10px !important;
+}
+
+/* Style the SVG icon */
+.input-group-addon svg {
+  fill: #03AF9F;
+}
+
+.model-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10px;
+}
+
+.medel-main-heading{
+  color: #123d42;
+  font-family: Lato;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* For all modern browsers */
+.input-group input::placeholder,
+.input input::placeholder
+ {
+  font-size: 14px; 
+}
+
+/* For Firefox */
+.input-group input::-moz-placeholder,
+.input input::-moz-placeholder
+ {
+  font-size: 14px;
+}
+
+/* For Internet Explorer */
+.input-group input:-ms-input-placeholder,
+.input input:-ms-input-placeholder
+ {
+  font-size: 14px; 
+}
+
+/* For Safari and older versions of Chrome */
+.input-group input::-webkit-input-placeholder,
+.input input::-webkit-input-placeholder
+ {
+  font-size: 14px; 
+}
+ 
+.repeat-checkbox-labels{
+  color: #494949;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-left: 10px; 
+}
+ 
+ 
+
+
+  /* ---------------Checkbox Code Start -------------- */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  display: none;
+  margin-right: 10px;
+}
+
+.checkmark { 
+  background-color: #fff;
+  border: 1px solid var(--primary); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--primary); 
+}
+
+.checkmark-sm{
+  height: 13px;
+  width: 13px;
+}
+
+.checkmark-lg{
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.custom-checkbox input:checked + .checkmark::before {
+  content: '\2713'; 
+  font-weight: 700;
+
+}
+
+
+
+  /* ---------------Checkbox Code End -------------- */
+ 
+
+  /* ------------------- Table Css Start ------------------ */
+
+  .cursor{
+    cursor: pointer;
+  }
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+  border: none;
+  padding: 8px; 
+}
+
+.custom-table tr {
+  border-bottom: none;  
+}
+
+table.custom-table thead tr {
+  border-radius: 1rem;
+}
+
+.table-container {
+  max-height: 18.75rem; 
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 36.25rem) {
+   .modal-content{
+    width: 25rem;
+   }
+
+}
+
+@media screen and (max-width: 25rem) {
+  .modal-content{
+   width: 18.75rem;
+  }
+
+}
+
+@media screen and (max-width: 18.75rem) {
+  .modal-content{
+   width: 15.625rem;
+  }
+
+}
+
+tbody {
+  background-color: var(--secondary);
+}
+ 
+
+tbody::-webkit-scrollbar {
+  width: 10px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px; 
+}
+
+tbody::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+}
+
+
+
+thead{
+  background-color: var(--primary);
+}
+
+thead tr th {
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 150%;
+}
+
+  /* ------------------- Table Css End ------------------ */
+
+
+  .save-btn{
+    padding: 1rem 0;
+    border-radius: 10px;
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .ui-datepicker {
+    z-index: 9999 !important;
+  }
+
+  .pad{
+    padding: 10px 20px;
+  }
+
+
+  /* -------------------- Update tab Right to left Animation css Start -------------- */
+
+  /* ------------ Custom class for sliding from right to left ------------  */
+.custom-slide-from-right .modal-dialog {
+  -webkit-animation: slideFromRight 0.3s;
+  -moz-animation: slideFromRight 0.3s;
+  -ms-animation: slideFromRight 0.3s;
+  -o-animation: slideFromRight 0.3s;
+  animation: slideFromRight 0.3s;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideFromRight {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes slideFromRight {
+  0% {
+    -o-transform: translateX(100%);
+  }
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@-ms-keyframes slideFromRight {
+  0% {
+    -ms-transform: translateX(100%);
+  }
+  100% {
+    -ms-transform: translateX(0);
+  }
+}
+/* ----- Custom class for sliding from left to Right End -----  */
+
+/* ----- Custom class for sliding from Right to Left Start -----  */
+
+.custom-slide-from-right:not(.show) .modal-dialog {
+  -webkit-animation: slideToRight 0.3s;
+  -moz-animation: slideToRight 0.3s;
+  -ms-animation: slideToRight 0.3s;
+  -o-animation: slideToRight 0.3s;
+  animation: slideToRight 0.3s;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slideToRight {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@-moz-keyframes slideToRight {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -moz-transform: translateX(100%);
+  }
+}
+
+@-o-keyframes slideToRight {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(100%);
+  }
+}
+
+@-ms-keyframes slideToRight {
+  0% {
+    -ms-transform: translateX(0);
+  }
+  100% {
+    -ms-transform: translateX(100%);
+  }
+}
+/* ----- Custom class for sliding from Left to right End -----  */
+
+
+  /* -------------------- Update tab Right to left Animation css Start -------------- */
+
+
+  /* ---------------- Date picker Css Start --------------------   */
+
+  .ui-datepicker {
+    background-color: #fff;
+  }
+
+  /* 2. Add a border and circle style for the selected/picked date */
+  .ui-datepicker td.ui-datepicker-current-day a {
+    border: 2px solid #1F95AF !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F95AF !important;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* 3. Flex styles for the header (month/year) and arrows */
+  .ui-datepicker-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .ui-datepicker-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ui-state-default,
+  .ui-datepicker-calendar tbody,
+  .ui-widget-header,
+  .ui-datepicker-calendar thead{
+    background: none !important;
+    border: none !important;
+ 
+   }
+
+   .ui-datepicker-calendar{
+    margin-top: 1.3rem;
+   }
+
+
+   .ui-widget-header thead span{
+    color: #7E818C;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
+    text-transform: uppercase;
+   }
+   .ui-state-default{
+    width: 24px;
+    /* height: 24px; */
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1re,;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
+   }
+
+   #ui-datepicker-div{
+    padding: 1rem;
+    border-radius: 1rem;
+   }
+
+   .ui-datepicker-calendar thead tr{
+      margin-top: 1rem
+   }
+
+   .ui-datepicker-header{
+    position: relative;
+   }
+    .ui-datepicker-header::before{
+      position: absolute;
+      content: '';
+      top: 45px;
+      left: 0;
+      width: 260px;
+      border-bottom: 1px solid #E4E5E7;
+   }
+   
+   .ui-datepicker td {
+    padding: 5px;
+
+   }
+
+   .ui-datepicker-buttonpane{
+    display: none;
+   }
+
+   .ui-datepicker-title{
+    margin: 0 !important;
+    text-align: start !important ;
+   }
+
+   .ui-datepicker-title span{ 
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-transform: uppercase;
+ 
+   }
+
+   .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    
+    background: none !important;
+    border: none;
+    cursor: pointer;
+   }
+
+   .ui-datepicker .ui-datepicker-prev{
+    left: 200px
+   }
+ 
+ /* Customize the left arrow icon */
+ .ui-datepicker-prev::before {
+  content: "<"; 
+  font-family: Poppins;
+
+  font-weight: 500;
+  font-size: 18px; 
+}
+
+.ui-datepicker td:hover{
+  color: red !important 
+
+}
+
+/* Customize the right arrow icon */
+.ui-datepicker-next:hover::before {
+  background: none !important;
+}
+  .ui-datepicker-next::before {
+  content: ">"; 
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px; 
+}
+
+/* Hide the previous and next month text */
+.ui-datepicker-prev span, .ui-datepicker-next span {
+  visibility: hidden;
+}
+
+/* Hide the circled dates */
+.ui-datepicker-current-day a {
+  border: none; 
+  background-color: transparent; 
+}
+
+ 
+  /* ---------------- Date picker Css End --------------------   */
+  @media screen and (max-width: 461px) {
+    .active_goal_heading{
+      font-size: 0.8em;
+    }
+  }

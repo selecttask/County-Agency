@@ -1,0 +1,561 @@
+
+    
+  
+    .horizontal-tabs {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      border-bottom: 2px solid #ccc;
+    }
+    
+    .tab-item {
+      padding: 10px 20px;
+      cursor: pointer;
+      position: relative; 
+      color: var(--2, #0B393E);
+      text-align: center;
+      font-family: Poppins;
+      font-size: 0.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+     }
+  
+     .tab-item.active{
+      color: #000;
+  
+     }
+    
+    
+    /* Active tab indicator */
+    .tab-item.active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px; /* Adjust this value to change the height of the active tab indicator */
+      background-color: var(--primary);
+      position: absolute;
+      bottom: -1px; /* Adjust this value to control the distance of the indicator line from the tab text */
+      left: 0;
+    }
+   
+  
+    .goal-img img{
+      width: 6rem;
+      height: 6rem;
+    }
+  
+    .description {
+      color: #000;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+   
+    .create-goal-btn{
+      color: var(--dashboard-colors-dashboard-white, #FFF);
+      text-align: center;
+      font-family: Lato;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 0.8rem 5rem;
+      border-radius: 8px;
+    }
+  
+  
+    /* ------------------------Table CSS Start --------------------------------- */
+    
+    .table td, .table th {
+      vertical-align: inherit;
+    }
+  
+    .card{
+      border-radius: 1rem !important;
+    }
+  
+    .progress-bar-container{
+      display: flex !important;
+      flex-direction: row;
+      gap: 1rem ;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    .progress-bar{
+      background-color: var(--primary);
+    }
+  
+    .submit-outline-btn{
+      padding: 0.4rem 1rem;
+       text-align: center;
+      font-family: Lato;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #F6F6F6 !important;
+    }
+    
+    table {
+      border-collapse: separate; 
+      border-spacing: 0px 10px; 
+    }
+    
+    tbody tr {
+      box-shadow: -3px 5px 16px -2px rgba(0, 0, 0, 0.12);
+      background-color: #fff;
+    }
+  
+    table tr td, table tr th {
+      border-bottom: none;
+    }
+  
+    table tr th{
+        color: var(--2, #0B393E);
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+  
+  .flex {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto
+  }
+  
+  @media (max-width:991.98px) {
+      .padding {
+          padding: 1.5rem
+      }
+      .main-screen-content{
+        padding: 0;
+      }
+  }
+  
+  @media (max-width:767.98px) {
+      .padding {
+          padding: 1rem
+      }
+  }
+  
+  .padding {
+      padding: 5rem
+  }
+  
+  .card {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none
+  }
+  
+  .pl-3,
+  .px-3 {
+      padding-left: 1rem !important
+  }
+  
+  .card {
+      position: relative;
+      display: flex;
+      flex-direction:  column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 1px solid #d2d2dc;
+      border-radius: 0
+  }
+  
+  .card .card-title {
+      color: #000000;
+      margin-bottom: 0.625rem;
+      text-transform: capitalize;
+      font-size: 0.875rem;
+      font-weight: 500
+  }
+  
+  .card .card-description {
+      margin-bottom: .875rem;
+      font-weight: 400;
+      color: #76838f
+  }
+  
+  p {
+      font-size: 0.875rem;
+      margin-bottom: .5rem;
+      line-height: 1.5rem
+  }
+  
+  .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar
+  }
+  
+  .table,
+  .jsgrid .jsgrid-table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent
+  }
+  
+  .table thead th,
+  .jsgrid .jsgrid-table thead th {
+      color: var(--2, #0B393E);
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+  
+      border-top: 0;
+      border-bottom-width: 1px;
+      font-weight: 500;
+      font-size: .875rem;
+      text-transform: uppercase
+  }
+  
+  .table td,
+  .jsgrid .jsgrid-table td {
+    color: #2A2A2A;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 0.875rem;
+    padding: .875rem 0.9375rem
+  }
+  
+  .badge {
+      border-radius: 0;
+      font-size: 12px;
+      line-height: 1;
+      padding: .375rem .5625rem;
+      font-weight: normal
+  }
+  
+  .progress {
+     height: 10px;
+     margin-top:7px;
+     background-color: #ffcc24;
+  }
+  .progress-bar {
+    border-radius: 1rem;
+  
+  }
+  
+  .complete-percentage{
+    margin: 0;
+    color: #2A2A2A;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  
+    /* ------------------------Table CSS End --------------------------------- */
+ 
+    .anychart-credits{
+        display: none;
+    }
+
+    .input-element{
+        border-radius: 14px;
+        border: 1px solid var(--dashboard-colors-dashboard-dark-grey, #979797);
+        background-color: #fff !important;
+        height: 2.3rem !important;
+        border-radius: 10px !important;
+        color: var(--2, #0B393E);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+  /* ---------------- Date picker Css Start --------------------   */
+
+  .ui-datepicker {
+    background-color: #fff;
+  }
+
+  /* 2. Add a border and circle style for the selected/picked date */
+  .ui-datepicker td.ui-datepicker-current-day a {
+    border: 2px solid #1F95AF !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F95AF !important;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+  }
+
+  /* 3. Flex styles for the header (month/year) and arrows */
+  .ui-datepicker-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .ui-datepicker-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ui-state-default,
+  .ui-datepicker-calendar tbody,
+  .ui-widget-header,
+  .ui-datepicker-calendar thead{
+    background: none !important;
+    border: none !important;
+ 
+   }
+
+   .ui-datepicker-calendar{
+    margin-top: 1.3rem;
+   }
+
+
+   .ui-widget-header thead span{
+    color: #7E818C;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
+    text-transform: uppercase;
+   }
+   .ui-state-default{
+    width: 24px;
+    /* height: 24px; */
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1re,;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
+   }
+
+   #ui-datepicker-div{
+    /* padding: 1rem; */
+    border-radius: 1rem;
+   }
+
+
+   .ui-datepicker-calendar thead tr{
+      margin-top: 1rem
+   }
+
+   .ui-datepicker-header{
+    position: relative;
+   }
+    .ui-datepicker-header::before{
+      position: absolute;
+      content: '';
+      top: 45px;
+      left: 0;
+      width: 260px;
+      border-bottom: 1px solid #E4E5E7;
+   }
+   
+   .ui-datepicker td {
+    padding: 5px;
+
+   }
+
+   .ui-datepicker-buttonpane{
+    display: none;
+   }
+
+   .ui-datepicker-title{
+    margin: 0 !important;
+    text-align: start !important ;
+   }
+
+   .ui-datepicker-title span{ 
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-transform: uppercase;
+ 
+   }
+
+   .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    
+    background: none !important;
+    border: none;
+    cursor: pointer;
+   }
+
+   .ui-datepicker .ui-datepicker-prev{
+    left: 200px
+   }
+ 
+ /* Customize the left arrow icon */
+ .ui-datepicker-prev::before {
+  content: "<"; 
+  font-family: Poppins;
+
+  font-weight: 500;
+  font-size: 18px; 
+}
+
+.ui-datepicker td:hover{
+  color: red !important 
+
+}
+
+/* Customize the right arrow icon */
+.ui-datepicker-next:hover::before {
+  background: none !important;
+}
+  .ui-datepicker-next::before {
+  content: ">"; 
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px; 
+}
+
+/* Hide the previous and next month text */
+.ui-datepicker-prev span, .ui-datepicker-next span {
+  visibility: hidden;
+}
+
+/* Hide the circled dates */
+.ui-datepicker-current-day a {
+  border: none; 
+  background-color: transparent; 
+}
+
+.input-group-addon {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 0;
+    width: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  
+  }
+
+  .input-group-addon svg {
+    fill: #03AF9F;
+  }
+
+ 
+  /* ---------------- Date picker Css End --------------------   */
+
+  /* ---------------- Pagination Css Start -----------------  */
+
+
+  .page-link{
+    color: #333;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+  }
+
+  .deactive{
+    color: #cccc;
+    cursor: no-drop;
+  }
+
+  .deactive:hover{
+    background-color: #fff;
+    color: #ccc
+    
+  }
+
+  .selected{
+    background-color: var(--primary);
+    color: #fff;
+  }
+
+  .page-link.links,
+  .page-link.head{
+    padding: 6px 12px !important;
+    border-radius: 8px !important; 
+  }
+
+  /* {
+    padding: 6px 12px !important;
+    border-radius: 10px !important;
+
+  } */
+
+  .pagination{
+    gap: 8px
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ---------------- Pagination Css End -----------------  */
+
+
+  .header-contents span{
+    color: var(--2, #0B393E);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .default-text{
+    color: var(--2, #0B393E);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .card{
+    border: none
+  }
+
+  .img-border{
+    padding: 3px;
+    border-radius: 50%;
+  }
+
+  

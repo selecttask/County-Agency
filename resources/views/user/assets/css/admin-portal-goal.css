@@ -1,0 +1,363 @@
+
+
+  .horizontal-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; 
+    color: var(--2, #0B393E);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+   }
+
+   .tab-item.active{
+    color: #000;
+
+   }
+  
+  
+  /* Active tab indicator */
+  .tab-item.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+  }
+ 
+
+  .goal-img img{
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .description {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+ 
+  .create-goal-btn{
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.8rem 5rem;
+    border-radius: 8px;
+  }
+
+
+  /* ------------------------ Modal Css Start -------------- */
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+  }
+
+  .modal.show {
+    display: block;
+  }
+
+  .modal-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    transition: all 0.3s ease;
+
+  }
+
+   
+.modal-dialog{
+  margin: 0;
+}
+
+.modal-content {
+  border-radius: 20px 0 0 20px; 
+}
+
+ 
+.form-group {
+  position: relative;
+  display: inline-block;
+}
+
+.form-group .datepicker {
+  padding-right: 10rem; 
+  border-radius: 7px ;
+}
+
+.input-group-addon {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  width: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+}
+
+.dates{
+  color: var(--menu-heading-black, #000);
+  font-family: Poppins;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 3px;
+}
+
+
+.dates label{
+  margin: 0 0 3px 5px;
+}
+
+.custom{
+  border-radius: 10px !important;
+}
+
+/* Style the SVG icon */
+.input-group-addon svg {
+  fill: #03AF9F;
+}
+
+.model-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10px;
+}
+
+.medel-main-heading{
+  color: #123d42;
+  font-family: Lato;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* 
+.cancel img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+} */
+
+
+/* For all modern browsers */
+.input-group input::placeholder,
+.input input::placeholder
+ {
+  font-size: 14px; 
+}
+
+/* For Firefox */
+.input-group input::-moz-placeholder,
+.input input::-moz-placeholder
+ {
+  font-size: 14px;
+}
+
+/* For Internet Explorer */
+.input-group input:-ms-input-placeholder,
+.input input:-ms-input-placeholder
+ {
+  font-size: 14px; 
+}
+
+/* For Safari and older versions of Chrome */
+.input-group input::-webkit-input-placeholder,
+.input input::-webkit-input-placeholder
+ {
+  font-size: 14px; 
+}
+ 
+.repeat-checkbox-labels{
+  color: #494949;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-left: 10px; 
+}
+ 
+ 
+
+
+  /* ---------------Checkbox Code Start -------------- */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  display: none;
+  margin-right: 10px;
+}
+
+.checkmark { 
+  background-color: #fff;
+  border: 1px solid var(--primary); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--primary); 
+}
+
+.checkmark-sm{
+  height: 13px;
+  width: 13px;
+}
+
+.checkmark-lg{
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.custom-checkbox input:checked + .checkmark::before {
+  content: '\2713'; 
+  font-weight: 700;
+
+}
+
+
+
+  /* ---------------Checkbox Code End -------------- */
+ 
+
+  /* ------------------- Table Css Start ------------------ */
+
+  .cursor{
+    cursor: pointer;
+  }
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+  border: none;
+  padding: 8px; 
+}
+
+.custom-table tr {
+  border-bottom: none;  
+}
+
+table.custom-table thead tr {
+  border-radius: 1rem;
+}
+
+.table-container {
+  max-height: 18.75rem; /* Set the max height for the container */
+  overflow-y: auto; /* Show vertical scrollbar when content exceeds the container height */
+}
+
+@media screen and (max-width: 36.25rem) {
+   .modal-content{
+    width: 25rem;
+   }
+
+}
+
+@media screen and (max-width: 25rem) {
+  .modal-content{
+   width: 18.75rem;
+  }
+
+}
+
+@media screen and (max-width: 18.75rem) {
+  .modal-content{
+   width: 15.625rem;
+  }
+
+}
+
+tbody {
+  background-color: var(--secondary);
+}
+
+tbody::-webkit-scrollbar {
+  width: 10px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px; 
+}
+
+tbody::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+}
+thead{
+  background-color: var(--primary);
+}
+
+thead tr th {
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+  /* ------------------- Table Css End ------------------ */
+
+  
+
+
+  .save-btn{
+    padding: 1rem 0;
+    border-radius: 10px;
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .ui-datepicker {
+    z-index: 9999 !important;
+  }
+
+  

@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+  --font-lato: Lato;
+  --primary: #03AF9F;
+  --secondary: #F4F9F6;
+  --primary-2: #0B393E;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --dashboard-colors-dashboard-dark-grey: #979797;
+  --menu-heading-black: #000;
+  --color: #0b393e;
+  --dashboard-colors-dashboard-white: #fff;
+  --dashboard-colors-dashboard-darkest-grey-color: #666;
+
+  /* border radiuses */
+  --br-sm: 14px;
+}
+
+
+.primary-color{
+  color: var(--primary)
+}
+
+.bg-yellow{
+  background-color: #DCFF07;
+}
+
+.w-13{
+  width: 13rem !important;
+}
+
+.btn-outline-primary{
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Sidebar toggle */
+
+#sidebar-toggle {
+  padding: 10px;
+  font-size: 24px; /* Larger icon */
+  color: #03AF9F; /* Icon color */
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 50px; /* Square button */
+  height: 50px;
+  outline: none; /* No outline */
+}
+#sidebar-toggle1 {
+  padding: 10px;
+  font-size: 24px; /* Larger icon */
+  color: #03AF9F; /* Icon color */
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 50px; /* Square button */
+  height: 50px;
+  outline: none; /* No outline */
+}
+#sidebar-toggle2 {
+  padding: 10px;
+  font-size: 24px; /* Larger icon */
+  color: #03AF9F; /* Icon color */
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 50px; /* Square button */
+  height: 50px;
+  outline: none; /* No outline */
+}
+#sidebar-toggle3 {
+  padding: 10px;
+  font-size: 24px; /* Larger icon */
+  color: #03AF9F; /* Icon color */
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 50px; /* Square button */
+  height: 50px;
+  outline: none; /* No outline */
+}
+
+#sidebar-toggle:hover {
+  color: #02776b; /* Darker color when hovered */
+}
+
+#sidebar-toggle:active {
+  color: #014d40; /* Even darker color when clicked */
+}
+
+
+
+.btn-outline-primary:hover{
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+} 
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+
+.form-control::placeholder {  
+  color: var(--dashboard-colors-dashboard-dark-grey, #979797);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {  
+  color: var(--dashboard-colors-dashboard-dark-grey, #979797);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-control::-ms-input-placeholder {  
+  color: var(--dashboard-colors-dashboard-dark-grey, #979797);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-check-input{
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+}
+
+.form-check-label{
+  color: var(--dashboard-colors-dashboard-dark-grey, #979797);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+@media screen and (max-width: 461px) {
+  .active_goal_heading{
+    font-size: 0.8em;
+  }
+}

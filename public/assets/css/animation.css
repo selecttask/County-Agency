@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    background: #0B393E;
+    opacity: 0.6;
+    z-index: 999999999999999;
+  }
+
+  #animation {
+    display: none;
+    overflow: hidden;
+  }
+
+  #avatars {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #avatars #boy{
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    z-index: -1;
+    height: 50%;
+    animation-name: popup;
+    animation-duration: 1s;
+  }
+
+  #avatars #girl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 45%;
+    animation-name: popup;
+    animation-duration: 1s;
+  }
+
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  canvas {
+    /* width:100%; */
+    /* height:100%; */
+    position:absolute;
+    z-index: 0;
+    animation-name: popup;
+    animation-duration: 1s;
+  }
+
+  #contentContainer {
+    width: fit-content;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: scaleup;
+    animation-duration: 2s;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    background: transparent;
+    z-index: 9999999999999999999;
+  }
+
+  .card-animation {
+    position: relative;
+    border: none;
+    background: transparent;
+  }
+
+  #baloonLeftContainer {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -70%);
+    height: 400px;
+    z-index: 1;
+  }
+
+  #baloonRightContainer {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -70%);
+    height: 400px;
+    z-index: 1;
+  }
+
+  .card-body {
+    z-index: 2;
+  }
+
+  #yayText, #nameTitle {
+    /* -webkit-animation:fontbulger 2s infinite !important;
+   -moz-animation:fontbulger 2s infinite !important;
+   -o-animation:fontbulger 2s infinite !important;
+   animation:fontbulger 2s infinite !important; */
+   font-family: 'Borel', cursive;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #avatars #boy, #baloonRightContainer, #baloonLeftContainer {
+      display: none;
+    }
+  }
+
+  @keyframes scaleup {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+  @keyframes popup {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+  }
+
+
+  /* text animation */
+
+  @-moz-keyframes fontbulger  {
+    0%, 100% {
+       font-size:80px;
+    }
+    
+    50% {
+       font-size:110px;
+    }
+ 
+ }
+ 
+ @-o-keyframes fontbulger  {
+    0%, 100% {
+       font-size:80px;
+    }
+    
+    50% {
+       font-size:110px;
+    }
+ 
+ }
+ 
+ @keyframes fontbulger  {
+    0%, 100% {
+       font-size:80px;
+    }
+    
+    50% {
+       font-size:110px;
+    }
+} 
+
+@keyframes balloonAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#baloonLeftContainer img,
+#baloonRightContainer img {
+  animation: balloonAnimation 2s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.display-4,
+#nameTitle,
+.fs-4 {
+  animation: fadeIn 2s ease-in-out;
+  animation-fill-mode: both;
+  opacity: 0;
+}

@@ -1,0 +1,353 @@
+ /* --------------------- Sidebar Css Start -------------------- */
+
+ .sidebar {
+  color: white;
+  background-color: var(--primary-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 255px;
+  /* transition: all 0.3s ease; */
+
+  display: block;
+  /* height: 100%; */
+  /* opacity: 1; */
+}
+
+ 
+
+.toggle-img{
+  height: 1rem !important; 
+  width: 1rem !important;
+}
+
+/* .nav.flex-column{
+  transition: all 0.3s ease;
+} */
+
+.main-screen {
+  background-color: var(--secondary);
+  flex: 1;
+  /* padding: 1rem;  */
+}
+
+.w-full{
+  width: 100%;
+}
+
+.form {
+  margin-top: 2rem;
+  border-radius: 20px;
+  border: none;
+  width: 100%; 
+  max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-flex {
+    flex-direction: column !important; 
+  }
+
+   
+   
+  .sidebar {
+    width: 100%;
+  } 
+
+  .sidebar-logo{
+    justify-content: space-between !important;
+    padding: 0 3rem;
+  }
+
+  
+
+  .h-full {
+    height: auto !important;
+  }
+ 
+
+}
+
+.main-screen-content {
+  padding: 0 2.5rem;
+}
+
+ 
+  .nav-link{
+    display: flex;
+    /* gap: 0rem; */
+  }
+
+  .nav-link img{
+    width: 1.4rem;
+    height: auto;
+  }
+
+  .custom-flex{
+    display: flex;
+    flex-direction: row; 
+  }
+  .flex-column{
+    padding-left: 8%;
+    width: 100%;
+    gap: 0.2rem;
+
+  }
+
+  .nav-item{
+    margin-top: 0.1rem ;
+  }
+ 
+  
+  .sidebar-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+
+  .sidebar-logo img{
+    width: 10rem;
+    height: auto;
+    margin-left: 32px;
+}
+
+  .h-full{
+    height: 100vh ;
+  }
+ 
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 3.5rem;
+
+    border-radius: 8px 0px 0px 8px;
+    /* box-shadow: 0px 4px 14px 0px rgba(3, 175, 159, 0.15); */
+
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: white;
+    color: var(--primary); 
+  }
+
+  .nav-link img {
+    margin-right: 10px;
+     /* transition: filter 0.3s ease; */
+  }
+  
+  .table td, .table th {
+    vertical-align: inherit;
+  }
+
+  .profile{
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(180%) contrast(106%)
+  }
+  
+  .nav-link.active img,
+  .nav-link:hover img {
+    filter: invert(53%) sepia(31%) saturate(7303%) hue-rotate(144deg) brightness(98%) contrast(98%)
+  }
+
+  .nav-link.active:after,
+  .nav-link:hover:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0.4rem;
+    height: 3.5rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    background-color: var(--primary);
+  }
+
+  .goal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 1rem
+
+
+  }
+
+  .heading h1{
+    color: #0B393E;
+    font-family: Lato;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem ;
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  } 
+
+  /*model Css */
+
+  .model-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10px;
+  }
+  
+  .medel-main-heading{
+    color: #123d42;
+    font-family: Lato;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    /* height: 500px; */
+  }
+
+  .modal.show {
+    display: block;
+  }
+
+  .modal-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    transition: all 0.3s ease;
+  }
+
+.modal-dialog{
+  margin: 0;
+}
+
+.modal-content {
+  border-radius: 20px 0 0 20px; 
+  /* border: 1px solid black; */
+  height: 100vh;
+}
+
+  /* --------------------- Sidebar Css End -------------------- */
+
+  .horizontal-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab-item {
+    padding: 10px ;
+    cursor: pointer;
+    position: relative; 
+ 
+   }
+
+   .pad{
+    padding: 10px 20px;
+   }
+
+   .tab-item a{
+    color: var(--2, #0B393E);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+   }
+
+   .tab-item.active{
+    color: #000;
+
+   }
+  
+  
+  /* Active tab indicator */
+  .tab-item.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Adjust this value to change the height of the active tab indicator */
+    background-color: var(--primary);
+    position: absolute;
+    bottom: -1px; /* Adjust this value to control the distance of the indicator line from the tab text */
+    left: 0;
+  }
+
+  .input-element{
+    border-radius: 14px;
+    border: 1px solid var(--dashboard-colors-dashboard-dark-grey, #979797);
+    background-color: #fff !important;
+    height: 3rem !important;
+    border-radius: 10px !important;
+    color: var(--2, #0B393E);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+  .label{
+    color: var(--menu-heading-black, #000);
+    font-family: Poppins;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  
+
+  .form-check{
+    padding: 0;
+
+  }
+
+  .form-check a{
+    color: #0B393E;
+    text-align: center;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .update-btn{
+    border-radius: 6px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }

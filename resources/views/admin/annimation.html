@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <script src="https://cdn.jsdelivr.net/gh/mattboldt/typed.js@2.0.11/dist/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.6.0/confetti.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js@2.0.0/confetti.min.js "></script>
+    
+</head>
+
+<style>
+    body {
+    background: #f4f4f4;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #submitBtn {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 20px auto;
+        background: #2ecc71;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #confettiCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #congratsDiv {
+        z-index: 2;
+        position: relative;
+    }
+</style>
+
+<body>
+    <canvas id="confettiCanvas"></canvas>
+    <form>
+        <input type="button" value="Submit" id="submitBtn">
+    </form>
+
+    <div id="congratsDiv" style="display: none;">
+        <h1 id="congratsText"></h1>
+        <h3 id="nameText"></h3>
+        <h2 id="goalText"></h2>
+    </div>
+
+<script>
+    window.onload = function () {
+        const confettiSettings = { target: 'confettiCanvas' };
+        const confetti = new ConfettiGenerator(confettiSettings);
+
+        const sound = new Howl({
+            src: ['./assets/clap.wav'] 
+        });
+
+        document.getElementById('submitBtn').onclick = function () {
+            console.log('hello');
+            document.getElementById('congratsDiv').style.display = "block";
+            confetti.render();
+
+            sound.play();
+
+            new Typed('#congratsText', {
+                strings: ["Congratulations!"],
+                typeSpeed: 30
+            });
+
+            new Typed('#nameText', {
+                strings: ["John Brew"],
+                typeSpeed: 30,
+                startDelay: 1000
+            });
+
+            new Typed('#goalText', {
+                strings: ["You have completed the goal!"],
+                typeSpeed: 30,
+                startDelay: 2000
+            });
+        };
+    }
+</script>
+
+</body>
+</html>

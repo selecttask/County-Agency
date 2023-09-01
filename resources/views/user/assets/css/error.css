@@ -1,0 +1,73 @@
+
+body{
+    background-color: var(--secondary);
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    width: 35rem; 
+    min-height: 20rem; 
+    padding: 20px;
+    border: 1px solid #e4e3e3;
+    border-radius: 12px;
+  }
+
+  .h-full{
+    height: 100vh !important;
+  }
+
+  .logo img{
+    height: 90px;
+    width: 90px;
+  }
+
+  .heading h1{
+    color: var(--2, #0B393E);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Lato;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .details{
+    color: var(--dashboard-colors-dashboard-darkest-grey-color, #666);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .submit-btn{
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    width: 26rem;
+    height: 3rem;
+    border-radius: 9px;
+
+    color: var(--dashboard-colors-dashboard-white, #FFF);
+    text-align: center;
+    font-family: Lato;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      width: 90%;
+      min-height: 150px;
+    }
+  }
+  

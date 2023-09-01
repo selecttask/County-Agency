@@ -1,0 +1,25 @@
+/*  
+.container {
+    height: 100vh;
+}
+
+
+
+
+.carousel-item img{
+    height: 600px;
+    width: auto;
+}
+*/
+
+#offers {
+    height: 100vh;
+}
+
+.carousel-item{
+    max-height: 100vh;
+}
+
+.carousel-item img{
+    aspect-ratio: 1 / 1;
+}

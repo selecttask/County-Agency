@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/CA-logo 1.png" type="image/x-icon" />
+
+    <title>Admin Portal</title>
+    <!-- Link Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="./assets/css/admin-portal-profile.css" />
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <link rel="stylesheet" href="./assets/css/sidebar.css" />
+  <body>
+    <div class="custom-flex h-full">
+      <div class="sidebar show">
+        <div class="sidebar-logo">
+          <div>
+            <img src="./assets/images/Logo.png" alt="No Image" />
+
+          </div>
+          <div>
+            <button
+            id="menu-toggle"
+            class="btn btn-primary d-md-none"
+            data-toggle="collapse"
+            data-target="#sidebarMenu"
+          >
+            <img
+              class="toggle-img"
+              src="./assets/images/toggle.png"
+              alt="No Toggle"
+            />
+          </button>
+          </div>
+          
+        </div>
+        <!-- Add the 'collapse' class and an ID to the ul element -->
+        <ul class="nav flex-column d-md-block collapse" id="sidebarMenu">
+          <li class="nav-item">
+            <a class="nav-link" href="./goal.html">
+              <img src="./assets/images/goal.png" alt="No Image" />
+              <span>Goal</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./profile.html">
+              <img
+                src="./assets/images/profile.png"
+                class="profile"
+                alt="No Image"
+              />
+              <span>Profile</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./report.html">
+              <img src="./assets/images/reports.png" alt="No Image" />
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./comp1.html">
+              <img src="./assets/images/companyStats.png" alt="No Image" />
+              <span>Active Goals</span>
+            </a>
+          </li>
+          <div class="logout">
+            <div class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="./assets/images/logout.png" alt="No Image" />
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+        </ul>
+        <!-- <div class="logout">
+          <div class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="./assets/images/logout.png" alt="No Image" />
+              <span>Logout</span>
+            </a>
+          </div>
+        </div> -->
+      </div>
+ 
+
+      <div class="main-screen">
+        <div class="main-screen-content mt-4">
+          <div class="heading">
+            <h1>
+              <button id="sidebar-toggle">&#9776;</button> <!-- This is a hamburger icon -->
+              Users
+            </h1>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <ul class="nav horizontal-tabs" id="tabMenu">
+                <li class="tab-item active">
+                  <a class="pad" data-toggle="pill" href="#home">Users</a>
+                </li>
+                <li class="tab-item">
+                  <a class="pad" data-toggle="pill" href="#menu1">My Details</a>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+
+
+          <br>
+          <div
+            class="modal right-model fade custom-slide-from-right"
+            id="showModalButton"
+            tabindex="-1"
+            role="dialog"
+          >
+            <div class="modal-dialog right-model-dialog modal-lg" role="document">
+              <div class="modal-content" style="height: 100%;">
+                <form>
+                  <div class="modal-body">
+                    <div class="model-head">
+                      <div class="heading">
+                        <h5 class="medel-main-heading">Edit Goal</h5>
+                      </div>
+                      <div class="cancel">
+                        <button
+                          type="button"
+                          id="close-model"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="row px-3 pt-2">
+                      <div class="col-12 col-md-12 col-lg-12 dates">
+                        <div class="input">
+                          <label for="oldPassword">Old Password</label>
+                          <input
+                            type="password"
+                            id="oldPassword"
+                            placeholder="Enter Your Old Password"
+                            class="form-control custom"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-12 col-lg-12 dates mt-3">
+                        <div class="input">
+                          <label for="newPassword">New Password</label>
+                          <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="Enter Your New Password"
+                            class="form-control custom"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-12 col-lg-12 dates mt-3">
+                        <div class="input">
+                          <label for="confirmPassword">Comfirm Password</label>
+                          <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Comfirm Your New Password"
+                            class="form-control custom"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row px-3 mt-3">
+                      <div class="col-12 col-md-12 col-lg-12 dates">
+                        <div class="input">
+                          <button
+                            type="button"
+                            class="btn btn-primary w-full save-btn"
+                            data-toggle="modal"
+                            data-target="#openConfirmModel"
+                            id="confirm"
+                          >
+                            Edit
+                          </button>
+                           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+ 
+
+
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active show">
+              <div class="card form">
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label class="label" for="firstName">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control input-element"
+                        id="firstName"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="label" for="lastName">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control input-element"
+                        id="lastName"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="label" for="email">Email</label>
+                      <input
+                        type="text"
+                        class="form-control input-element"
+                        id="email"
+                        placeholder="example@gmail.com"
+                      />
+                    </div>
+                    <div class="form-group form-check">
+                      <a href="#">Change Password</a>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-primary w-full mt-4 update-btn"
+                        data-toggle="modal"
+                        data-target="#showModalButton"
+                      >
+                        Update
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div id="menu1" class="tab-pane fade">
+              <h3>Menu 1</h3>
+              <p>Some content in menu 1.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Bootstrap JS (Optional if you require Bootstrap JS functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      $(document).ready(function () {
+
+        
+
+        const tabItems = document.querySelectorAll("#tabMenu .tab-item");
+
+        tabItems.forEach((tabItem) => {
+          tabItem.addEventListener("click", function () {
+            // Remove "active" class from all tab items
+            tabItems.forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            // Add "active" class to the clicked tab item
+            this.classList.add("active");
+          });
+        });
+      });
+
+      $('#confirm').click((e) => {
+        e.preventDefault()
+
+        Swal.fire({
+        title: 'Are you sure you want change password?',
+        icon: 'question',
+        confirmButtonText: 'Save',
+        cancelButtonText: 'No',
+        showCancelButton: true,
+        iconColor: '#03AF9F',
+        customClass: {
+            confirmButton: 'btn-primary'
+        }
+        })
+      })
+    </script>
+  </body>
+</html>
